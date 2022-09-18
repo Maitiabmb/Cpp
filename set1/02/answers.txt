@@ -1,0 +1,38 @@
+# In C++, what's the difference between a declaration and a definition?
+
+Definition associates the variable with a type and allocates memory,
+whereas declaration just specifies the type but doesn't allocate memory.
+Declaration is more useful when you want to refer the variable before definition.
+
+# What are header files used for?
+
+*Standard library header files
+
+*User-defined header files
+-Standard library header files: These are those header files that are already present in the compiler of C++; you just need to import them to use them.
+
+-User-defined header files: These are those header files defined by the user and can be used by including them in the program using #include.
+
+# When a compiler creates a program, in what part of the construction process
+does it use header files and in what part libraries? (Answer the question by
+focusing on the fact that the compiler uses header files and libraries.)
+
+Header files are not compiled directly, Instead, header files are included into other source files via #include. In fact, when you invoke a C++ compiler, before the real compiler starts, it runs a pre-processor whose job is to handle the special instructions that begin with #. In the case of #include statements, the pre-processor simply grabs the relevant header file and sticks its content into the program right at the spot of the #include.
+
+# Is a library an object module? Explain, and do not just answer yes or no.
+
+A library is not an object module. A library can contain one or more
+object modules. Libraries and the object file program.o are linked by the
+compiler in order to produce an executable file .
+
+# Why is an object file obtained after compiling a source containing int
+main() not an executable program?
+
+Because main() is just a function and can be treated generically liked a function
+sybol during the compilation phase. It does not direct the compiler to create
+an executable.
+
+
+
+
+

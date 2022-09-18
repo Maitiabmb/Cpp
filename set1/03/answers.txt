@@ -1,0 +1,65 @@
+1. is this a valid C++ program?
+
+int main()
+{}
+
+Yes, this is a valid C++ program because the main function has an empty body.
+
+2. Is this a valid C++ program?
+
+int main(int argc, char *argv[], char *envp[])
+{}
+
+No, this is not a valud C++ program, as the char *envp[] is not defined by
+the C++ standard.
+
+3. Is this a valid C++ program?
+
+int main(int argc, char *argv[])
+{
+    return;
+}
+
+No, this is not a valid C++ program. The return statement expects an int expression to compile.
+Fixe This  we need to return an int expression or remove the return statement.
+
+4. Is this a valid C++ expression, and is it true?
+sizeof('c') == 1
+
+The expression is valid and true, as 'c' is a char in C++, which has a size
+of 1 byte.
+
+5. In main(int argc, char *argv[]) it is true that argv[argc] == 0.
+
+Yes, the expression is valid and true.
+
+6. To immediately end a program from deep inside its code exit(0) should be
+used.
+
+This would not be a valid C++ program, as the program would not normally
+end. Instead, a C++ program simply ends when the function main returns, or
+when function try blocks are used.
+
+7. When defining an enum called Name start with enum Name, instead of using
+typedef enum Name.
+
+This is valid, as "typedef" in "typedef enum Name" is not required to define
+an enum definition.
+
+8. Is these valid C++ expressions (if not, how would you change them)?
+
+unsigned char ch = 231;
+ch = (unsigned char)231;
+ch = static_cast<unsigned char>(231);
+
+The first expression and the third one are valid C++ expression. The second
+one is not valid, as it is a C style cast.
+
+9. Briefly (!) explain the differences in meaning of the following two
+expressions:
+
+cout << (char)65;       // 1st
+cout << char(65);       // 2nd
+
+The first expression is a C style cast, which converts '65' into a char. The
+second expression is a constructor notation, we obtain the char for ASCII value 65

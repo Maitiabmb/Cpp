@@ -1,0 +1,20 @@
+# Commands to compile:
+
+For creating the object file: hello.o [g++ -Wall -std=c++20 -c hello.cc]
+
+For creating the executable: hello [g++ -o hello -s hello.o]
+
+# The descriptions of object file and executable file:
+
+Object file:An object file is a file that contains an object code that has relocatable format
+machine code which is not directly executable.
+
+Executable: An executable file is a file that can be directly executed by the computer and
+is capable of performing the indicated tasks according to the encoded instructions.
+
+# Size of files (in bytes):
+
+source file: 100
+object file: 2528 [stat --format="%s" hello.o] / [ du -sb hello.o ]
+executable program: 14400 [stat --format="%s" hello] / [ du -sb hello ]
+iostream: 2697 [du -sb /usr/include/c++/12.2.0/iostream]

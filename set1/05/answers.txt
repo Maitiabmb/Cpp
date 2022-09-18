@@ -1,0 +1,11 @@
+program < in > out
+
+Here, the "in" file is treated as stdin and the "out" file is treated as
+stdout when "program" runs.
+
+And here:
+
+program | less
+
+Here, the stdin of "program" is the usual stdin, and the "pipe" passes output of program.
+The output of "less" is sent to the usual stdout.
