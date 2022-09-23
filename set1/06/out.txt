@@ -1,7 +1,6 @@
-$ ./oddEven
-12
-even
-
-$ ./oddEven
-15
+odd
+odd
+odd
+odd
+odd
 odd

@@ -1,0 +1,21 @@
+
+*The commands you entered to compile and link the program; 
+ Command to compile the hello.cc source code:  
+ g++ -Wall -std=c++20 -Werror  -c hello hello.cc
+ Command to generate a binary program: g++ -Wall -std=c++20 -o hello hello.cc
+
+*The short descriptions of object file and executable; 
+ Object file essentially contains binary machine code as a result of the compilation 
+ process during which it undergoes preprocessing -> turn into assembly code -> turn 
+ into binary code. 
+ Executable file essentially is the result of linking where the linker links multiple
+ object files (when specified) to generate a single executable file, ready to  be 
+ executed by the system. 
+
+*The size in bytes (not kBytes!) of: the source file; the object file; the file 
+iostream 
+ Size of the source file in bytes: 113
+ Size of the object file in bytes:  2528 [stat --format="%s" hello.o]
+ Size of the executable in bytes: 14488 [stat --format="%s" hello]
+ Size of iostream: 2,697 bytes
+

@@ -1,0 +1,6 @@
+If the string itself contains " OR )" then a delimiter needs to be specified (*)
+
+*The exact rules are: "any member of the basic source character set except: space, 
+the left parenthesis (, the right parenthesis ), the backslash \, and the control 
+characters representing horizontal tab, vertical tab, form feed, and newline" 
+(N3936 §2.14.5 [lex.string] grammar) and "at most 16 characters" (§2.14.5/2)

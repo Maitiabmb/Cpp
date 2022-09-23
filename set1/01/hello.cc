@@ -1,6 +1,9 @@
 #include <iostream>
 
+
 int main()
 {
-  std::cout << "Hello World\n";            // print Hello world
+    // a "hello world" program
+    
+    std::cout << "hello world" << '\n';
 }

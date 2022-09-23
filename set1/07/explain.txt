@@ -1,0 +1,15 @@
+The first three hex characters are: cof
+
+The binary equivalent of 0xcof is:
+   11     00000    0111       1
+ |-(1)-| |-(2)-|  |-(3)-|  |-(4)-|
+ 
+ (1) - "the next 2 bits hold the value 3", thus 11
+ 
+ (2) - "the next 5 bits hold the value 0", thus 00000
+ 
+ (3) - "the next 4 bits hold the value 7", thus 0111
+ 
+ (4) - "the next 4 bits hold the value 15". for the first three hex characters, 
+ this is the MSB of 15, thus 1.
+ 

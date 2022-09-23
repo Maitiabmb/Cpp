@@ -1,0 +1,37 @@
+
+* In C++, what's the difference between a declaration and a definition?
+Declaration is about providing basic identifier(name) and its type. 
+For function declaration, return type, function name and its arguments together are 
+already enough. Basically, it is about creating the minimum prototype/blueprint of an
+'object' so that the compiler acknowledges its existence before they are actually 
+used. 
+
+Definition is about describing an object in full so that compiler knows how much and 
+where to store the object.
+
+* What are header files used for?
+Essentially, header files enables the reuse of code by providing a interface of a 
+library. Header files typically contain only function/variable declarations. The 
+content of the requested header files are inserted during preprocessing stage so that
+the compiler at least does not "complain".
+
+* When a compiler creates a program, in what part of the construction process does it
+use header files and in what part libraries? (Answer the question by focusing on the 
+fact that the compiler uses header files and libraries.)
+
+Header files are used during the preprocessing stage where the content of the 
+requested header is inserted into the source code.
+Libraries files are used during the linking process where linker(or compiler) 
+resolves reference of the predefined functions. 
+
+
+*Is a library an object module? Explain, and do not just answer yes or no.
+No, a library contains typically contains many (in the order of hundreds) object 
+files to avoid the overhead of linking every single object file each time. 
+ 
+*Why is an object file obtained after compiling a source containing int main() not 
+an executable program? 
+Because linking is not done. This process needs to be done by the linker so that it 
+links multiple object files, pre-compiled library etc. before turning into a single 
+binary program.  
+

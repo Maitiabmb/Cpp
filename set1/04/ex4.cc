@@ -1,18 +1,17 @@
-
 #include <iostream>
 
-namespace {                                      // anonymous namespace for the RSL
-
-char const output[] =                            // define the RSL output
-R"R(^\s+Encryption key:(\w+)
+namespace {    
+             
+char const path[] =         // define the Raw String Literal with R as the delimiter
+R"R(^\s+Encryption key:(\w+)  
 ^\s+Quality=(\d+)
 ^\s+E?SSID:"([[:print:]]+)"
 ^\s+ssid="([[:print:]]+)"
-)R";
+)R";      
 
 }
 
 int main()
 {
-    std::cout << output;                        // print the RSL
+    std::cout << path; // display the named RSL path
 }

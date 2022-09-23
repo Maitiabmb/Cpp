@@ -1,0 +1,78 @@
+
+1.  is this a valid C++ program?
+	
+
+    int main()
+    {}
+            
+Yes it is a valid C++ program.
+
+2.  Is this a valid C++ program?
+
+
+    int main(int argc, char *argv[], char *envp[])
+    {}
+            
+   
+NO, it is not a good practice to get the enviroment variables. Because *envp[] is not
+supported by all modern UNIX systems. 
+A better way to retrieve env variable would be declare a global variable 
+extern char **environ.
+
+3.  Is this a valid C++ program?
+  
+    int main(int argc, char *argv[])
+    {
+        return;
+    }
+
+No, it is not a valid C++ program as it has a undefined returned value while the 
+function type is int.
+
+
+4.  Is this a valid C++ expression, and is it true?
+
+    sizeof('c') == 1
+
+Yes, it is valid becasue sizeof('c') always returns 1. 
+(although not the case for C program which returns 4)
+
+5.  In main(int argc, char *argv[]) it is true that argv[argc] == 0?
+
+Yes, argv[argc] == 0 always holds. (it is the last argument  
+
+6.  To immediately end a program from deep inside its code, exit(0) should be used.
+
+No, it is not a good way to end a program because exit() will not call the destructor.
+
+
+7.  When defining an enum called Name start with enum Name, instead of using typedef 
+enum Name.
+
+Yes, not a problem as using typedef is no longer necessary in C++.
+
+
+8.  Are these valid C++ expressions (if not, how would you change them)?
+
+
+    unsigned char ch = 231;
+    ch = (unsigned char)231;
+    ch = static_cast<unsigned char>(231);
+
+The second expression is not a standard C++ expression as it is C-style cast which 
+does not have compile-time checking. 
+            
+
+9.  Briefly (!) explain the differences in meaning of the following two expressions: 
+(if not, how would you change them)?
+
+
+    cout << (char)65;       // 1st
+    cout << char(65);       // 2nd
+         
+The first expression casts an int into a char in C-style casting 
+(better use static_cast<char>(65) ), thus printing a character whose ASCII value is 
+65.   
+The second expression calls the pre-defined C++ function to print a character. 
+
+
